@@ -18,9 +18,6 @@ fi
 
 # 循环遍历项目数组
 for project in "${projects[@]}"; do
-
-  echo "Building project: $project"
-
   # 设置环境变量并执行构建命令
   echo "Building project: $project"
   npx cross-env VITE_APP_PROJECT="$project" vite build
