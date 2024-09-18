@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:lang": "cross-env VITE_APP_PROJECT=projectB vite build",
+    "build:lang": "cross-env VITE_APP_PROJECT=en vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

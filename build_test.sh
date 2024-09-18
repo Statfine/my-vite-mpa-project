@@ -8,7 +8,7 @@
 #!/bin/sh
 
 # 定义一个包含不同项目名称的数组
-projects=("projectA" "projectB")
+projects=("en" "ja")
 
 # 检查是否存在 dist 文件夹，如果存在则删除
 if [ -d "dist" ]; then

@@ -24,20 +24,25 @@ export default defineConfig(({ mode }) => {
   return {
     base: './',
     plugins: [react(), ...(mode === 'development' ? [] : [resetAttr()])],
-    root: 'src',
+    root: 'src/pages',
     build: {
       rollupOptions: {
         input: {
-          // projectA: path.resolve(__dirname, 'src/projectA/index.html'),
+          // en: path.resolve(__dirname, 'src/pages/en/index.html'),
           // projectB: path.resolve(__dirname, 'src/projectB/index.html'),
           [defaultProject]: path.resolve(
             __dirname,
-            `src/${defaultProject}/index.html`
+            `src/pages/${defaultProject}/index.html`
           ),
+          // [defaultProject]: path.resolve(
+          //   __dirname,
+          //   `src/pages/${defaultProject}/index.html`
+          // ),
         },
         output: {
           // dir: 'dist',
           dir: `dist/${defaultProject}`,
+          format: 'cjs',
         },
         plugins: [
           {
