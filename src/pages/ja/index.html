@@ -4,6 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Project A</title>
+  <script>
+    // `PerformanceObserver` 不可用，提供回退方案
+    if ('PerformanceObserver' in window) {
+      if (!PerformanceObserver.supportedEntryTypes) PerformanceObserver['supportedEntryTypes'] = []
+    } else window['PerformanceObserver']['supportedEntryTypes'] = []
+  </script>
 </head>
 <body>
   <div id="root"></div>

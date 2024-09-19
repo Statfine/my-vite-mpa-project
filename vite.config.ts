@@ -26,6 +26,7 @@ export default defineConfig(({ mode }) => {
     plugins: [react(), ...(mode === 'development' ? [] : [resetAttr()])],
     root: 'src/pages',
     build: {
+      target: 'es2015',
       rollupOptions: {
         input: {
           // en: path.resolve(__dirname, 'src/pages/en/index.html'),
