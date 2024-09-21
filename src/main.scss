@@ -1,0 +1,23 @@
+@use "sass:math";
+
+// 设置断点变量
+$breakpoint-medium: 604px;
+$breakpoint-large: 1024px;
+
+/**
+ * 已375为基准，不同尺寸下的宽度，转换为基准尺寸下的px
+*/
+
+@function designToBasePx($designPx, $elPx) {
+  @return math.div($elPx * 375px, $designPx);
+}
+
+@function defaultDesignToBasePx($elPx) {
+  @return math.div($elPx, 375) * 100vw;
+}
+@function mdDesignToBasePx($elPx) {
+  @return math.div($elPx, 604) * 100vw;
+}
+@function lgDesignToBasePx($elPx) {
+  @return math.div($elPx, 1024) * 100vw;
+}

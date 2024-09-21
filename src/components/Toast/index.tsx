@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import styles from './index.module.scss'
 
 const Toast = () => {
   const timerRef = useRef<any>()
@@ -44,7 +45,11 @@ const Toast = () => {
 
   if (!toastInfo.show) return null
 
-  return <div>Toast</div>
+  return (
+    <div className={styles.toast}>
+      <div className={styles.content}>{toastInfo.text}</div>
+    </div>
+  )
 }
 
 /**

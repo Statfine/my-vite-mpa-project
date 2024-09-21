@@ -1,0 +1,88 @@
+@import '../../main.scss';
+
+.toast {
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  width: 100%;
+  transform: translate(0%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .content {
+    max-width:  280px;
+    padding: 11px 16px 11px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    background: rgba(54, 54, 54, 0.9);
+    white-space: pre-wrap;
+  }
+  .loading {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+// 604px至1024px的样式
+@media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+  .toast {
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    width: 100%;
+    transform: translate(0%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .content {
+      max-width:  designToBasePx($breakpoint-medium, 323px);
+      padding: designToBasePx($breakpoint-medium, 11px) designToBasePx($breakpoint-medium, 16px);
+      border-radius: designToBasePx($breakpoint-medium, 6px);
+      font-size: designToBasePx($breakpoint-medium, 14px);
+      font-weight: 500;
+      line-height: designToBasePx($breakpoint-medium, 17px);
+      color: rgba(255, 255, 255, 1);
+      text-align: center;
+      background: rgba(54, 54, 54, 0.9);
+      white-space: pre-wrap;
+    }
+    .loading {
+      width: designToBasePx($breakpoint-medium, 62px);
+      height: designToBasePx($breakpoint-medium, 62px);
+    }
+  }
+}
+
+// 大于1024px的样式
+@media (min-width: $breakpoint-large) {
+  .toast {
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    width: 100%;
+    transform: translate(0%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .content {
+      max-width:  designToBasePx($breakpoint-large, 464px);
+      padding: designToBasePx($breakpoint-large, 14px) designToBasePx($breakpoint-large, 20px);
+      border-radius: designToBasePx($breakpoint-large, 8px);
+      font-size: designToBasePx($breakpoint-large, 18px);
+      font-weight: 500;
+      line-height: designToBasePx($breakpoint-large, 22px);
+      color: rgba(255, 255, 255, 1);
+      text-align: center;
+      background: rgba(54, 54, 54, 0.9);
+      white-space: pre-wrap;
+    }
+    .loading {
+      width: designToBasePx($breakpoint-medium, 50px);
+      height: designToBasePx($breakpoint-medium, 50px);
+    }
+  }
+}

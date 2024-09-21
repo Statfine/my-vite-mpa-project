@@ -1,6 +1,15 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+html {
+  background: transparent;
+  font-family: mochiyPopOne
+}
+
+/* 重置各标签的默认样式 */
+a, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, figcaption, figure, footer, form,
+h1, h2, h3, h4, h5, h6, header, hr, html, img, input, label, legend, li, mark, ol, p, section, span,  textarea, time, td, th, ul {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*  自动换行 */
+  word-wrap:break-word;
 }

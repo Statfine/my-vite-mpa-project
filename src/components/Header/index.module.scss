@@ -1,0 +1,67 @@
+@import '../../main.scss';
+
+.container {
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 250, 238, 0); /* 使用CSS变量 */
+  transition: background-color 0.3s; /* 平滑过渡背景色变化 */
+  z-index: 1000; /* 确保导航栏在最上层 */
+  width: 100%;
+  min-width: 44PX;
+  backdrop-filter: blur(0px);
+  position: fixed;
+  .header {
+    height: 44PX;
+    padding: 10PX 16PX;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .back_btn {
+      width: 24PX;
+      height: 24PX;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 9PX;
+        height: 16.5PX;
+      }
+    }
+  }
+}
+
+// 604px至1024px的样式
+@media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+  .container {
+    .header {
+      height: 44PX;
+      padding: 10PX 16PX;
+      .back_btn {
+        width: 24PX;
+        height: 24PX;
+        img {
+          width: 9PX;
+          height: 16.5PX;
+        }
+      }
+    }
+  }
+}
+
+// 大于1024px的样式
+@media (min-width: $breakpoint-large) {
+  .container {
+    .header {
+      height: 56PX;
+      padding: 13PX 24PX;
+      .back_btn {
+        width: 30PX;
+        height: 30PX;
+        img {
+          width: 11PX;
+          height: 20PX;
+        }
+      }
+    }
+  }
+}

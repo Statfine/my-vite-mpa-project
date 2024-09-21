@@ -1,0 +1,234 @@
+@import '../../main.scss';
+
+.container {
+  border-radius: 24px;
+  overflow: hidden;
+  background: url('../../assets/375/03.png') no-repeat 0 0 / 100%;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.25);
+  .top_content {
+    height: 74px;
+    position: relative;
+    .top_cover {
+      height: 22px;
+    }
+    .title {
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: pre-wrap; 
+      color: #fff;
+      font-size: 20px;
+      font-weight: 400;
+      padding: 0 16px;
+    }
+  }
+  .list_content {
+    padding: 20px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    .item {
+      width: 33.3333%;
+      padding: 4px 4.5px;
+      .wrap {
+        width: 100px;
+        height: 133px;
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        .cover {
+          width: 100%;
+          height: 100%;
+        }
+        .progress {
+          width: 100%;
+          height: 1.83px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background: red;
+          z-index: 2;
+        }
+        .play_count {
+          font-family: din-pro-heavy;
+          position: absolute;
+          right: 6px;
+          bottom: 4px;
+          display: flex;
+          align-items: center;
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 10px;
+          font-weight: 500;
+          line-height: 10px;
+          z-index: 2;
+          .icon_count {
+            width: 5px;
+            height: 6px;
+            margin-right: 3px;
+          }
+        }
+        .bottom_shade {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 21px;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 99.54%);
+        }
+      }
+      
+    }
+  }
+}
+
+@media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+  .container {
+    border-radius: mdDesignToBasePx(24px);
+    height: mdDesignToBasePx(590px);
+    overflow: hidden;
+    background: url('../../assets/604/03.png') no-repeat 0 0 / 100%;
+    box-shadow: 0px mdDesignToBasePx(4px) 0px 0px rgba(0, 0, 0, 0.25);
+    .top_content {
+      height: mdDesignToBasePx(74px);
+      position: relative;
+      .top_cover {
+        height: mdDesignToBasePx(22px);
+      }
+      .title {
+        height: mdDesignToBasePx(52px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        white-space: normal; 
+        color: #fff;
+        font-size: mdDesignToBasePx(20px);
+        font-weight: 400;
+        padding: 0 mdDesignToBasePx(16px);
+      }
+    }
+    .list_content {
+      padding: mdDesignToBasePx(18px) mdDesignToBasePx(10px);
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        width: 33.3333%;
+        padding: mdDesignToBasePx(6px);
+        .wrap {
+          width: mdDesignToBasePx(172px);
+          height: mdDesignToBasePx(228px);
+          position: relative;
+          border-radius: mdDesignToBasePx(8px);
+          overflow: hidden;
+          .cover {
+            width: 100%;
+            height: 100%;
+          }
+          .progress {
+            width: 100%;
+            height: mdDesignToBasePx(2px);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: red;
+          }
+          .play_count {
+            font-family: din-pro-heavy;
+            position: absolute;
+            right: mdDesignToBasePx(6px);
+            bottom: mdDesignToBasePx(4px);
+            display: flex;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: mdDesignToBasePx(10px);
+            font-weight: 500;
+            line-height: mdDesignToBasePx(10px);
+            .icon_count {
+              width: mdDesignToBasePx(5px);
+              height: mdDesignToBasePx(6px);
+              margin-right: mdDesignToBasePx(3px);
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+// 大于1024px的样式
+@media (min-width: $breakpoint-large) {
+  .container {
+    border-radius: lgDesignToBasePx(24px);
+    height: lgDesignToBasePx(978px);
+    overflow: hidden;
+    background: url('../../assets/1024/03.png') no-repeat 0 0 / 100%;
+    box-shadow: 0px lgDesignToBasePx(8px) 0px 0px rgba(0, 0, 0, 0.25);
+    .top_content {
+      height: lgDesignToBasePx(98px);
+      position: relative;
+      .top_cover {
+        height: lgDesignToBasePx(22px);
+      }
+      .title {
+        height: lgDesignToBasePx(76px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        white-space: normal; 
+        color: #fff;
+        font-size: lgDesignToBasePx(28px);
+        font-weight: 400;
+        padding: 0 lgDesignToBasePx(16px);
+      }
+    }
+    .list_content {
+      padding: lgDesignToBasePx(20px) lgDesignToBasePx(15.5px);
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        width: 33.3333%;
+        padding: lgDesignToBasePx(12px) lgDesignToBasePx(8.5px);
+        .wrap {
+          width: lgDesignToBasePx(298px);
+          height: lgDesignToBasePx(396px);
+          position: relative;
+          border-radius: lgDesignToBasePx(12px);
+          overflow: hidden;
+          .cover {
+            width: 100%;
+            height: 100%;
+          }
+          .progress {
+            width: 100%;
+            height: lgDesignToBasePx(3.5);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: red;
+          }
+          .play_count {
+            font-family: din-pro-heavy;
+            position: absolute;
+            right: lgDesignToBasePx(12px);
+            bottom: lgDesignToBasePx(8px);
+            display: flex;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: lgDesignToBasePx(18px);
+            font-weight: 500;
+            line-height: lgDesignToBasePx(18px);
+            .icon_count {
+              width: lgDesignToBasePx(10px);
+              height: lgDesignToBasePx(12px);
+              margin-right: lgDesignToBasePx(6px);
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}

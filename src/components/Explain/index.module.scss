@@ -1,0 +1,118 @@
+@import '../../main.scss';
+
+.container {
+  padding: 16px;
+  border-radius: 24px;
+  background: url('../../assets/375/04.png') no-repeat 0 0 / 100%;
+  background-size: 100% 100%;
+  background-color: #fff;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.25);
+  .label_text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    color: rgba(26, 27, 27, 1);
+  }
+  .desc_text {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: rgba(38, 38, 38, 1);
+    white-space: pre-line; 
+  }
+  .multiline_ellipsis {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8; /* 这里设置为8行 */
+    overflow: hidden;
+  }
+  .action {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    .svgIcon {
+      height: 12px;
+      width: 12px;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+  .container {
+    padding: mdDesignToBasePx(16px);
+    border-radius: mdDesignToBasePx(24px);
+    background: url('../../assets/604/04.png') no-repeat 0 0 / 100%;
+    background-size: 100% 100%;
+    background-color: #fff;
+    box-shadow: 0px mdDesignToBasePx(4px) 0px 0px rgba(0, 0, 0, 0.25);
+    .label_text {
+      font-size: mdDesignToBasePx(20px);
+      font-weight: 700;
+      line-height: mdDesignToBasePx(20px);
+      color: rgba(26, 27, 27, 1);
+    }
+    .desc_text {
+      margin-top: mdDesignToBasePx(16px);
+      font-size: mdDesignToBasePx(14px);
+      font-weight: 700;
+      line-height: mdDesignToBasePx(20px);
+      color: rgba(38, 38, 38, 1);
+    }
+    .multiline_ellipsis {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 6; /* 这里设置为8行 */
+      overflow: hidden;
+    }
+    .action {
+      margin-top: mdDesignToBasePx(16px);
+      display: flex;
+      justify-content: center;
+      .svgIcon {
+        height: mdDesignToBasePx(12px);
+        width: mdDesignToBasePx(12px);
+      }
+    }
+  }
+}
+
+// 大于1024px的样式
+@media (min-width: $breakpoint-large) {
+  .container {
+    padding: lgDesignToBasePx(24px);
+    border-radius: lgDesignToBasePx(24px);
+    background: url('../../assets/1024/04.png') no-repeat 0 0 / 100%;
+    background-size: 100% 100%;
+    background-color: #fff;
+    box-shadow: 0px lgDesignToBasePx(8px) 0px 0px rgba(0, 0, 0, 0.25);
+    .label_text {
+      font-size: lgDesignToBasePx(28px);
+      font-weight: 700;
+      line-height: lgDesignToBasePx(28px);
+      color: rgba(26, 27, 27, 1);
+    }
+    .desc_text {
+      margin-top: lgDesignToBasePx(16px);
+      font-size: lgDesignToBasePx(20px);
+      font-weight: 700;
+      line-height: lgDesignToBasePx(28px);
+      color: rgba(38, 38, 38, 1);
+    }
+    .multiline_ellipsis {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 6; /* 这里设置为8行 */
+      overflow: hidden;
+    }
+    .action {
+      margin-top: lgDesignToBasePx(24px);
+      display: flex;
+      justify-content: center;
+      .svgIcon {
+        height: lgDesignToBasePx(24px);
+        width: lgDesignToBasePx(24px);
+      }
+    }
+  }
+}

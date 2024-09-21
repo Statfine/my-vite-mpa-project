@@ -1,0 +1,329 @@
+@import '../../main.scss';
+
+.container {
+  padding: 16px;
+  border-radius: 24px;
+  background: url('../../assets/375/01.png')no-repeat 0 0 / 100%;
+  box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.25);
+  .label_text {
+    height: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #1A1B1B;
+  }
+  .desc_content {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    padding: 8px 16px;
+    .left_icon {
+      display: flex;
+      align-items: flex-end;
+      .svgIcon {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+      }
+    }
+    .right_text {
+      color: rgba(36, 36, 36, 1);
+      font-family: din-pro-heavy;
+      font-size: 22px;
+      font-weight: 900;
+      height: 22px;
+
+    }
+  }
+  .title_content {
+    margin-top: 16px;
+    color: #1B1B1B;
+    .text {
+      height: 32px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      text-align: center;
+      b {
+        font-size: 32px;
+        color: #F24235;
+      }
+    }
+    .comma {
+      display: none;
+    }
+  }
+  .cover {
+    margin-top: 16px;
+    width: 319px;
+    height: 248px;
+    background: url('../../assets/375/vip.png')
+        no-repeat 0 0 / 100%;
+  }
+  .desc_text {
+    margin-top: 16px;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #1B1B1B;
+  }
+  .price_content {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    color: #F24235;
+    font-family: din-pro-heavy;
+    .price {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-family: din-pro-heavy;
+      font-size: 54px;
+      line-height: 64px;
+    }
+    .unit {
+      margin: 0 6px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 28.8px;
+      padding-top: 28px;
+    }
+  }
+  .bug_btn {
+    margin-top: 16px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    background: #242424;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 40px;
+  }
+  .btn_disabled {
+    background: rgba(36, 36, 36, 0.5) !important;
+  }
+}
+
+@media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+  .container {
+    padding: mdDesignToBasePx(16px);
+    border-radius: mdDesignToBasePx(27px);
+    height: mdDesignToBasePx(634px);
+    background: url('../../assets/604/01.png') no-repeat 0 0 / 100%;
+    box-shadow: 0px mdDesignToBasePx(4px) 0px 0px rgba(0, 0, 0, 0.25);
+    .label_text {
+      height: mdDesignToBasePx(20px);
+      font-size: mdDesignToBasePx(20px);
+      font-weight: 400;
+      line-height: mdDesignToBasePx(20px);
+      letter-spacing: -mdDesignToBasePx(2px);
+      color: #1A1B1B;
+    }
+    .desc_content {
+      margin-top: mdDesignToBasePx(16px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 1);
+      border-radius: mdDesignToBasePx(20px);
+      padding: mdDesignToBasePx(8px) mdDesignToBasePx(16px);
+      .left_icon {
+        display: flex;
+        align-items: flex-end;
+        .svgIcon {
+          width: mdDesignToBasePx(20px);
+          height: mdDesignToBasePx(20px);
+          margin-right: mdDesignToBasePx(8px);
+        }
+      }
+      .right_text {
+        color: rgba(36, 36, 36, 1);
+        font-size: mdDesignToBasePx(22px);
+        font-weight: 900;
+        height: mdDesignToBasePx(22px);
+      }
+    }
+    .title_content {
+      margin-top: mdDesignToBasePx(16px);
+      .text {
+        height: mdDesignToBasePx(32px);
+        font-size: mdDesignToBasePx(24px);
+        font-weight: 400;
+        line-height: mdDesignToBasePx(32px);
+        text-align: center;
+        b {
+          font-size: mdDesignToBasePx(32px);
+          color: #F24235;
+        }
+      }
+      .comma {
+        display: none;
+      }
+    }
+    .cover {
+      margin-top: mdDesignToBasePx(16px);
+      width: mdDesignToBasePx(540px);
+      height: mdDesignToBasePx(248px);
+      background: #F1EDE9;
+      background: url('../../assets/604/vip.png')
+        no-repeat 0 0 / 100%;
+    }
+    .desc_text {
+      margin-top: mdDesignToBasePx(16px);
+      padding: 0 mdDesignToBasePx(20px);
+      text-align: center;
+      font-size: mdDesignToBasePx(16px);
+      font-weight: 400;
+      line-height: mdDesignToBasePx(16px);
+      height: mdDesignToBasePx(16px);
+      color: #1B1B1B;
+    }
+    .price_content {
+      margin-top: mdDesignToBasePx(16px);
+      display: flex;
+      justify-content: center;
+      color: #F24235;
+      font-family: din-pro-heavy;
+      .price {
+        font-family: din-pro-heavy;
+        font-size: mdDesignToBasePx(64px);
+        line-height: mdDesignToBasePx(64px);
+      }
+      .unit {
+        margin: 0 mdDesignToBasePx(6px);
+        font-size: mdDesignToBasePx(24px);
+        font-weight: 400;
+        line-height: mdDesignToBasePx(28.8px);
+        padding-top: mdDesignToBasePx(28px);
+      }
+    }
+    .bug_btn {
+      margin-top: mdDesignToBasePx(16px);
+      height: mdDesignToBasePx(56px);
+      line-height: mdDesignToBasePx(56px);
+      text-align: center;
+      background: #242424;
+      color: #FFFFFF;
+      font-size: mdDesignToBasePx(20px);
+      font-weight: 400;
+      border-radius: mdDesignToBasePx(40px);
+    }
+  }
+}
+
+// 大于1024px的样式
+@media (min-width: $breakpoint-large) {
+  .container {
+    padding: lgDesignToBasePx(24px);
+    border-radius: lgDesignToBasePx(24px);
+    height: lgDesignToBasePx(732px);
+    background: url('../../assets/1024/01.png') no-repeat 0 0 / 100%;
+    box-shadow: 0px lgDesignToBasePx(8px) 0px 0px rgba(0, 0, 0, 0.25);
+    .label_text {
+      height: lgDesignToBasePx(28px);
+      font-size: lgDesignToBasePx(28px);
+      font-weight: 400;
+      line-height: lgDesignToBasePx(28px);
+      letter-spacing: -lgDesignToBasePx(2px);
+      color: #1A1B1B;
+    }
+    .desc_content {
+      margin-top: lgDesignToBasePx(24px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 1);
+      border-radius: lgDesignToBasePx(24px);
+      padding: lgDesignToBasePx(8px) lgDesignToBasePx(24px);
+      .left_icon {
+        display: flex;
+        align-items: flex-end;
+        .svgIcon {
+          width: lgDesignToBasePx(24px);
+          height: lgDesignToBasePx(24px);
+          margin-right: lgDesignToBasePx(12px);
+        }
+      }
+      .right_text {
+        color: rgba(36, 36, 36, 1);
+        font-size: lgDesignToBasePx(32px);
+        font-weight: 900;
+        height: lgDesignToBasePx(32px);
+        line-height: lgDesignToBasePx(32px);
+      }
+    }
+    .title_content {
+      margin-top: lgDesignToBasePx(24px);
+      color: #1B1B1B;
+      display: flex;
+      justify-content: center;
+      .text {
+        height: lgDesignToBasePx(40px);
+        font-size: lgDesignToBasePx(32px);
+        font-weight: 400;
+        line-height: lgDesignToBasePx(40px);
+        text-align: center;
+        b {
+          font-size: lgDesignToBasePx(40px);
+          color: #F24235;
+        }
+      }
+      .comma {
+        display: block;
+      }
+    }
+    .cover {
+      margin-top: lgDesignToBasePx(24px);
+      width: lgDesignToBasePx(928px);
+      height: lgDesignToBasePx(248px);
+      background: #F1EDE9;
+      background: url('../../assets/1024/vip.png')
+        no-repeat 0 0 / 100%;
+    }
+    .desc_text {
+      margin-top: lgDesignToBasePx(24px);
+      padding: 0 lgDesignToBasePx(20px);
+      text-align: center;
+      font-size: lgDesignToBasePx(24px);
+      font-weight: 400;
+      line-height: lgDesignToBasePx(24px);
+      height: lgDesignToBasePx(24px);
+      color: #1B1B1B;
+    }
+    .price_content {
+      margin-top: lgDesignToBasePx(24px);
+      display: flex;
+      justify-content: center;
+      color: #F24235;
+      font-family: din-pro-heavy;
+      .price {
+        font-size: lgDesignToBasePx(80px);
+        line-height: lgDesignToBasePx(80px);
+      }
+      .unit {
+        margin: 0 lgDesignToBasePx(12px);
+        font-size: lgDesignToBasePx(32px);
+        font-weight: 400;
+        line-height: lgDesignToBasePx(38px);
+        padding-top: lgDesignToBasePx(33px);
+      }
+    }
+    .bug_btn {
+      margin-top: lgDesignToBasePx(24px);
+      height: lgDesignToBasePx(72px);
+      line-height: lgDesignToBasePx(72px);
+      text-align: center;
+      background: #242424;
+      color: #FFFFFF;
+      font-size: lgDesignToBasePx(28px);
+      font-weight: 400;
+      border-radius: lgDesignToBasePx(40px);
+    }
+  }
+}
