@@ -1,7 +1,6 @@
 import request from '../utils/request'
 
-const API_DOMAIN =
-  import.meta.env.VITE_API || 'https://dev-project-v-api.stardustworld.cn'
+const API_DOMAIN = import.meta.env.VITE_API
 console.log('API_DOMAIN env', import.meta.env)
 
 /** 获取悬浮框数据 */

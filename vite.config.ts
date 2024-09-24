@@ -24,7 +24,14 @@ export default defineConfig(({ mode }) => {
   return {
     base: './',
     plugins: [react(), ...(mode === 'development' ? [] : [resetAttr()])],
-    root: 'src/pages',
+    root: 'src/pages', // Vite 会根据 root 目录来查找 .env 文件
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler', // or "modern"
+        },
+      },
+    },
     build: {
       target: 'es2015',
       rollupOptions: {
