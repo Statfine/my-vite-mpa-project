@@ -20,7 +20,7 @@ fi
 for project in "${projects[@]}"; do
   # 设置环境变量并执行构建命令
   echo "Building project: $project"
-  npx cross-env VITE_APP_PROJECT="$project" vite build
+  npx cross-env VITE_APP_PROJECT="$project" vite build  --mode test
 done
 
 # 压缩 dist 目录到 ZIP 文件

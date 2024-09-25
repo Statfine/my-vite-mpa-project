@@ -1,3 +1,17 @@
+@font-face {
+  font-family: din-pro-heavy;
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(./assets/fonts/D-DIN-PRO-900-Heavy.otf);
+}
+@font-face {
+  font-family: mochiyPopOne;
+  font-style: normal;
+  font-weight: 500;
+  src: url(./assets/fonts/D-DIN-PRO-900-Heavy.otf);
+}
+
 html {
   background: transparent;
   font-family: mochiyPopOne

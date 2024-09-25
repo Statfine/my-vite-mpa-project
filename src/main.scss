@@ -13,11 +13,11 @@ $breakpoint-large: 1024px;
 }
 
 @function defaultDesignToBasePx($elPx) {
-  @return math.div($elPx, 375) * 100vw;
+  @return math.div($elPx * 375, 100px);
 }
 @function mdDesignToBasePx($elPx) {
-  @return math.div($elPx, 604) * 100vw;
+  @return math.div($elPx * 375px, 604px);
 }
 @function lgDesignToBasePx($elPx) {
-  @return math.div($elPx, 1024) * 100vw;
+  @return math.div($elPx * 375px, 1024px);
 }

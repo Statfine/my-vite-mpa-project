@@ -1,21 +1,21 @@
 import { useEffect, useState } from 'react'
 import { webview } from '@cmsfe/tools'
 import * as Sentry from '@sentry/react'
-// import CountDown from '../../components/CountDown'
-// import Explain from '../../components/Explain'
+import CountDown from '../../components/CountDown'
+import Explain from '../../components/Explain'
 import FocusPicture from '../../components/FocusPicture'
 import Header from '../../components/Header'
 import Loading from '../../components/Loading'
-// import ModuleOne from '../../components/ModuleOne'
-// import ModuleThree from '../../components/ModuleThree'
-// import ModuleTwo from '../../components/ModuleTwo'
+import ModuleOne from '../../components/ModuleOne'
+import ModuleThree from '../../components/ModuleThree'
+import ModuleTwo from '../../components/ModuleTwo'
 import Toast from '../../components/Toast'
 import useToken from '../../hooks/useToken'
 import useUrlParams from '../../hooks/useUrlParams'
 import { i18n } from '../../locales'
 import { getActivityInfo } from '../../services/api'
 import { ActivityBookItemType, ActivityInfoType } from '../../services/types'
-// import { isIosApp } from '../../utils'
+import { isIosApp } from '../../utils'
 import {
   initReportActivity,
   reportH5Activity48hPage,
@@ -81,7 +81,7 @@ function App() {
   }, [tokenInfo])
 
   /** 日韩德注册用户vip商品放上面 */
-  // const changeSequence = () => ['kr', 'jp', 'de'].includes(activityInfo.country)
+  const changeSequence = () => ['kr', 'jp', 'de'].includes(activityInfo.country)
 
   const reportBookPv = (books: ActivityBookItemType[]) => {
     const item_list: string[] = []
@@ -150,20 +150,20 @@ function App() {
     }
   }
 
-  // const handleRefresh = () => initData()
+  const handleRefresh = () => initData()
 
-  // const renderCard = (el: React.ReactNode) => (
-  //   <div className="pb-16rs pl-12rs pr-12rs md:pb-16md md:pl-16md md:pr-16md lg:pb-24lg lg:pl-24lg lg:pr-24lg">
-  //     {el}
-  //   </div>
-  // )
+  const renderCard = (el: React.ReactNode) => (
+    <div className="pb-16rs pl-12rs pr-12rs md:pb-16md md:pl-16md md:pr-16md lg:pb-24lg lg:pl-24lg lg:pr-24lg">
+      {el}
+    </div>
+  )
 
   console.log('activityInfo', activityInfo)
   return (
     <div className="bg-[#ff3b36] w-full overflow-hidden">
       <Header />
       <FocusPicture imgJson={imgJson} />
-      {/* {activityInfo?.countdown !== 0 &&
+      {activityInfo?.countdown !== 0 &&
         renderCard(
           <CountDown
             countdownSeconds={activityInfo.countdown_seconds}
@@ -187,7 +187,7 @@ function App() {
         <p className="pb-32rs pl-32rs pr-32rs pt-16rs text-14rs lh-20rs text-[#fff] md:pb-32md md:pl-32md md:pr-32md md:pt-16md md:text-14md lg:pb-30lg lg:pl-48lg lg:pr-48lg lg:pt-16lg lg:text-20lg">
           {i18n('apple说明')}
         </p>
-      )} */}
+      )}
       <Toast />
       <Loading />
     </div>

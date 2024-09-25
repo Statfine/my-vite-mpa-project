@@ -1,25 +1,25 @@
 @import '../../main.scss';
 
 .content {
-  width: defaultDesignToBasePx(375);
-  height: defaultDesignToBasePx(360);
-  margin-bottom: defaultDesignToBasePx(16);
+  width: 375px;
+  height: 360px;
+  margin-bottom: 16px;
 }
 
-// // 604px至1024px的样式
+// 604px至1024px的样式
 @media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
   .content {
-    width: mdDesignToBasePx(604);
-    height: mdDesignToBasePx(374);
-    margin-bottom: mdDesignToBasePx(16);
+    width: mdDesignToBasePx(604px);
+    height: mdDesignToBasePx(374px);
+    margin-bottom: mdDesignToBasePx(16px);
   }
 }
 
-// // // 大于1024px的样式
+// 大于1024px的样式
 @media (min-width: $breakpoint-large) {
   .content {
-    width: lgDesignToBasePx(1024);
-    height: lgDesignToBasePx(482);
-    margin-bottom: lgDesignToBasePx(16);
+    width: lgDesignToBasePx(1024px);
+    height: lgDesignToBasePx(400px);
+    margin-bottom: lgDesignToBasePx(16px);
   }
 }
